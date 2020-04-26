@@ -2,8 +2,7 @@ package relacionamentoDeClasses;
 
 public class Lutador {
 
-	
-	//Attributes
+	// Attributes
 	private String nome, alcunha;
 	private String granja, nacionalidade;
 	private int idade;
@@ -13,11 +12,10 @@ public class Lutador {
 	private int vitorias;
 	private int derrotas;
 	private int empates;
-	
-	
-	//Constructor
-	public Lutador(String nome, String alcunha ,String granja, String nacionalidade ,int idade, double altura, double peso, 
-			int vitorias, int derrotas, int empates) {
+
+	// Constructor
+	public Lutador(String nome, String alcunha, String granja, String nacionalidade, int idade, double altura,
+			double peso, int vitorias, int derrotas, int empates) {
 		this.nome = nome;
 		this.alcunha = alcunha;
 		this.granja = granja;
@@ -29,16 +27,16 @@ public class Lutador {
 		this.derrotas = derrotas;
 		this.empates = empates;
 	}
-	
-	
-	//Get and Set
+
+	// Get and Set
 	public String getNome() {
 		return nome;
 	}
+
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
+
 	public String getAlcunha() {
 		return alcunha;
 	}
@@ -46,14 +44,15 @@ public class Lutador {
 	public void setAlcunha(String alcunha) {
 		this.alcunha = alcunha;
 	}
-	
+
 	public String getGranja() {
 		return granja;
 	}
+
 	public void setGranja(String granja) {
 		this.granja = granja;
 	}
-	
+
 	public String getNacionalidade() {
 		return nacionalidade;
 	}
@@ -61,73 +60,76 @@ public class Lutador {
 	public void setNacionalidade(String nacionalidade) {
 		this.nacionalidade = nacionalidade;
 	}
-	
+
 	public int getIdade() {
 		return idade;
 	}
+
 	public void setIdade(int idade) {
 		this.idade = idade;
 	}
+
 	public double getAltura() {
 		return altura;
 	}
+
 	public void setAltura(double altura) {
 		this.altura = altura;
 	}
-	
-	
+
 	public double getPeso() {
 		return peso;
 	}
+
 	public void setPeso(double peso) {
 		this.peso = peso;
 		this.setCategoria();
 	}
+
 	public String getCategoria() {
 		return categoria;
 	}
-	
+
 	public void setCategoria() {
 		if (this.peso < 0.6) {
 			this.categoria = "Invalido";
-			 }
-		else if (this.peso <= 1.2) {
-				 this.categoria = "Leve";
-			 }
-		else if(this.peso <= 2.4) {
-				 this.categoria = "Medio";
-			 
-			  if (this.peso <= 3.1) {
-					 this.categoria = "Pesado";
-				 }
-				  else categoria = "Invalido";
-			 }
-		
-		
+		} else if (this.peso <= 1.2) {
+			this.categoria = "Leve";
+		} else if (this.peso <= 2.4) {
+			this.categoria = "Medio";
+		} else if (this.peso <= 3.1) {
+			this.categoria = "Pesado";
+		} else
+			categoria = "Invalido";
+
 	}
-	
+
 	public int getVitorias() {
 		return vitorias;
 	}
+
 	public void setVitorias(int vitorias) {
 		this.vitorias = vitorias;
 	}
+
 	public int getDerrotas() {
 		return derrotas;
 	}
+
 	public void setDerrotas(int derrotas) {
 		this.derrotas = derrotas;
 	}
+
 	public int getEmpates() {
 		return empates;
 	}
+
 	public void setEmpates(int empates) {
 		this.empates = empates;
 	}
 
+	// Methods
 
-	//Methods
-	
 	public void apresentar() {
 		System.out.println("----------------------------");
 		System.out.println("ladies and gentlemens, CHEGOU A HORA");
@@ -139,30 +141,25 @@ public class Lutador {
 		System.out.println(this.getDerrotas() + " Derrotas e");
 		System.out.println(this.getEmpates() + " Empates! ");
 	}
+
 	public void status() {
 		System.out.println(this.getNome());
-		System.out.println("É um peso: " + getCategoria());
+		System.out.println("ï¿½ um peso: " + getCategoria());
 		System.out.println(this.getVitorias() + "Vitorias");
 		System.out.println(this.getDerrotas() + "Derrotas");
 		System.out.println(this.getEmpates() + "Empates");
 	}
+
 	public void ganharLuta() {
 		this.setVitorias(getVitorias() + 1);
 	}
+
 	public void perderLuta() {
 		this.setDerrotas(getDerrotas() + 1);
 	}
+
 	public void empatarLuta() {
 		this.setEmpates(getEmpates() + 1);
 	}
 
-
-	
-	}
-
-
-	
-
-
-
-
+}
