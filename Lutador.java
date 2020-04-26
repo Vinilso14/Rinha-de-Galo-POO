@@ -91,21 +91,17 @@ public class Lutador {
 		if (this.peso < 0.6) {
 			this.categoria = "Invalido";
 			 }
-		else if (this.peso <= 1.2) {
-				 this.categoria = "Leve";
-			 }
-		else if(this.peso <= 2.4) {
-				 this.categoria = "Medio";
-			 
-			  if (this.peso <= 3.1) {
-					 this.categoria = "Pesado";
-				 }
-				  else categoria = "Invalido";
-			 }
+	 else if (this.peso <= 1.2) {
+		this.categoria = "Leve";
+	} else if (this.peso <= 2.4) {
+		this.categoria = "Medio";
+	} else if (this.peso <= 3.1) {
+		this.categoria = "Pesado";
+	} else
+		categoria = "Invalido";
+			
+		}
 		
-		
-	}
-	
 	public int getVitorias() {
 		return vitorias;
 	}
@@ -134,7 +130,7 @@ public class Lutador {
 		System.out.println("Apresentamos o galo " + this.getNome() + " " + this.alcunha);
 		System.out.println("Diretamente da Granja " + this.getGranja() + "Do(a)" + this.getNacionalidade());
 		System.out.println("Com " + this.getIdade() + " Anos " + "E " + this.altura + "m");
-		System.out.println("Pesando: " + this.getPeso() + "Kg");
+		System.out.println("Pesando: " + this.getPeso() + "Kg" + "Um peso: " + getCategoria());
 		System.out.println("Com " + this.getVitorias() + " Vitorias");
 		System.out.println(this.getDerrotas() + " Derrotas e");
 		System.out.println(this.getEmpates() + " Empates! ");
