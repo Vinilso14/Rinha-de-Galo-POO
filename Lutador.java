@@ -136,7 +136,8 @@ public class Lutador {
 		System.out.println("Apresentamos o galo " + this.getNome() + " " + this.alcunha);
 		System.out.println("Diretamente da Granja " + this.getGranja() + "Do(a)" + this.getNacionalidade());
 		System.out.println("Com " + this.getIdade() + " Anos " + "E " + this.altura + "m");
-		System.out.println("Pesando: " + this.getPeso() + "Kg");
+		System.out.println("� um peso: " + getCategoria());
+                System.out.println("Pesando: " + this.getPeso() + "Kg");
 		System.out.println("Com " + this.getVitorias() + " Vitorias");
 		System.out.println(this.getDerrotas() + " Derrotas e");
 		System.out.println(this.getEmpates() + " Empates! ");
